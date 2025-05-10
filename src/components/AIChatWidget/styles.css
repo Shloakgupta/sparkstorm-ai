@@ -27,9 +27,12 @@
 }
 
 .chat-widget-logo {
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
   object-fit: contain;
+  background: white;
+  border-radius: 50%;
+  padding: 2px;
 }
 
 .chat-widget {
@@ -63,8 +66,8 @@
 }
 
 .chat-header-logo {
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   object-fit: contain;
   background: white;
   border-radius: 50%;
@@ -109,6 +112,7 @@
   border-radius: 15px;
   position: relative;
   animation: fadeIn 0.3s ease;
+  white-space: pre-line;
 }
 
 .message.user {
@@ -220,7 +224,7 @@
   }
   
   .chat-widget-logo {
-    width: 20px;
-    height: 20px;
+    width: 28px;
+    height: 28px;
   }
 } 
