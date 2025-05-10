@@ -190,12 +190,72 @@ const AIChatWidget: React.FC = () => {
   };
 
   const getBotResponse = (query: string): string => {
-    // Check for exact matches first
-    for (const [key, value] of Object.entries(knowledgeBase)) {
-      if (query.includes(key)) {
-        return value;
+    // Convert query to lowercase and remove extra spaces
+    const normalizedQuery = query.toLowerCase().trim();
+    
+    // Define question variations
+    const questionVariations = {
+      "what is sparkstorm": ["what is sparkstorm", "what is sparkstorm ai", "tell me about sparkstorm", "about sparkstorm", "sparkstorm info", "sparkstorm details"],
+      "who is noopur gupta": ["who is noopur gupta", "tell me about noopur gupta", "about noopur gupta", "noopur gupta info", "ceo info", "founder info"],
+      "how do i use sparkstorm ai": ["how do i use sparkstorm", "how to use sparkstorm", "how to get started", "getting started", "how to begin", "start using sparkstorm"],
+      "company history": ["company history", "history", "when was sparkstorm founded", "founding", "company background"],
+      "mission": ["mission", "company mission", "what is your mission", "mission statement"],
+      "vision": ["vision", "company vision", "what is your vision", "vision statement"],
+      "values": ["values", "company values", "core values", "what are your values"],
+      "team": ["team", "company team", "who works at sparkstorm", "employees", "staff"],
+      "location": ["location", "where is sparkstorm", "office location", "headquarters"],
+      "size": ["size", "company size", "how big is sparkstorm", "number of employees"],
+      "awards": ["awards", "recognition", "achievements", "accomplishments"],
+      "products": ["products", "what products do you offer", "product suite", "offerings"],
+      "services": ["services", "what services do you offer", "service offerings"],
+      "solutions": ["solutions", "what solutions do you offer", "solution offerings"],
+      "platform": ["platform", "what is your platform", "platform features"],
+      "analytics": ["analytics", "data analytics", "analytics tools"],
+      "automation": ["automation", "automated solutions", "automation tools"],
+      "integration": ["integration", "how to integrate", "system integration"],
+      "customization": ["customization", "custom solutions", "custom features"],
+      "scalability": ["scalability", "how does it scale", "scaling options"],
+      "updates": ["updates", "new features", "latest updates"],
+      "features": ["features", "what features do you offer", "platform features"],
+      "capabilities": ["capabilities", "what can it do", "platform capabilities"],
+      "technology": ["technology", "what technology do you use", "tech stack"],
+      "security": ["security", "how secure is it", "security measures"],
+      "performance": ["performance", "how fast is it", "speed", "efficiency"],
+      "reliability": ["reliability", "how reliable is it", "uptime"],
+      "accessibility": ["accessibility", "how to access", "access options"],
+      "api": ["api", "api documentation", "api access"],
+      "documentation": ["documentation", "docs", "user guides"],
+      "compliance": ["compliance", "security standards", "regulations"],
+      "pricing": ["pricing", "cost", "how much does it cost", "price"],
+      "plans": ["plans", "subscription plans", "pricing plans"],
+      "free trial": ["free trial", "trial", "demo", "test"],
+      "discounts": ["discounts", "special pricing", "deals"],
+      "billing": ["billing", "payment", "subscription"],
+      "refund": ["refund", "refund policy", "money back"],
+      "enterprise": ["enterprise", "enterprise features", "large business"],
+      "comparison": ["comparison", "compare", "vs", "versus"],
+      "value": ["value", "roi", "return on investment"],
+      "investment": ["investment", "cost", "pricing"],
+      "support": ["support", "help", "customer support", "technical support"],
+      "training": ["training", "how to use", "tutorials"],
+      "user guides": ["user guides", "documentation", "manuals"],
+      "tutorials": ["tutorials", "how to", "guides"],
+      "community": ["community", "user community", "forums"],
+      "platform updates": ["platform updates", "new features", "updates"],
+      "feedback": ["feedback", "suggestions", "improvements"],
+      "help": ["help", "support", "assistance"],
+      "contact": ["contact", "how to contact", "reach us"],
+      "response time": ["response time", "how fast do you respond", "support time"]
+    };
+
+    // Check for variations of questions
+    for (const [key, variations] of Object.entries(questionVariations)) {
+      if (variations.some(variation => normalizedQuery.includes(variation))) {
+        return knowledgeBase[key];
       }
     }
+
+    // If no match found, return the default response
     return knowledgeBase.default;
   };
 
