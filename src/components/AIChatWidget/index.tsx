@@ -215,72 +215,134 @@ const AIChatWidget: React.FC = () => {
   };
 
   const getBotResponse = (query: string): string => {
-    // Convert query to lowercase and remove extra spaces
-    const normalizedQuery = query.toLowerCase().trim();
-    
-    // Define question variations
-    const questionVariations = {
-      "what is sparkstorm": ["what is sparkstorm", "what is sparkstorm ai", "tell me about sparkstorm", "about sparkstorm", "sparkstorm info", "sparkstorm details"],
-      "who is noopur gupta": ["who is noopur gupta", "tell me about noopur gupta", "about noopur gupta", "noopur gupta info", "ceo info", "founder info"],
-      "how do i use sparkstorm ai": ["how do i use sparkstorm", "how to use sparkstorm", "how to get started", "getting started", "how to begin", "start using sparkstorm"],
-      "company history": ["company history", "history", "when was sparkstorm founded", "founding", "company background"],
-      "mission": ["mission", "company mission", "what is your mission", "mission statement"],
-      "vision": ["vision", "company vision", "what is your vision", "vision statement"],
-      "values": ["values", "company values", "core values", "what are your values"],
-      "team": ["team", "company team", "who works at sparkstorm", "employees", "staff"],
-      "location": ["location", "where is sparkstorm", "office location", "headquarters"],
-      "size": ["size", "company size", "how big is sparkstorm", "number of employees"],
-      "awards": ["awards", "recognition", "achievements", "accomplishments"],
-      "products": ["products", "what products do you offer", "product suite", "offerings"],
-      "services": ["services", "what services do you offer", "service offerings"],
-      "solutions": ["solutions", "what solutions do you offer", "solution offerings"],
-      "platform": ["platform", "what is your platform", "platform features"],
-      "analytics": ["analytics", "data analytics", "analytics tools"],
-      "automation": ["automation", "automated solutions", "automation tools"],
-      "integration": ["integration", "how to integrate", "system integration"],
-      "customization": ["customization", "custom solutions", "custom features"],
-      "scalability": ["scalability", "how does it scale", "scaling options"],
-      "updates": ["updates", "new features", "latest updates"],
-      "features": ["features", "what features do you offer", "platform features"],
-      "capabilities": ["capabilities", "what can it do", "platform capabilities"],
-      "technology": ["technology", "what technology do you use", "tech stack"],
-      "security": ["security", "how secure is it", "security measures"],
-      "performance": ["performance", "how fast is it", "speed", "efficiency"],
-      "reliability": ["reliability", "how reliable is it", "uptime"],
-      "accessibility": ["accessibility", "how to access", "access options"],
-      "api": ["api", "api documentation", "api access"],
-      "documentation": ["documentation", "docs", "user guides"],
-      "compliance": ["compliance", "security standards", "regulations"],
-      "pricing": ["pricing", "cost", "how much does it cost", "price"],
-      "plans": ["plans", "subscription plans", "pricing plans"],
-      "free trial": ["free trial", "trial", "demo", "test"],
-      "discounts": ["discounts", "special pricing", "deals"],
-      "billing": ["billing", "payment", "subscription"],
-      "refund": ["refund", "refund policy", "money back"],
-      "enterprise": ["enterprise", "enterprise features", "large business"],
-      "comparison": ["comparison", "compare", "vs", "versus"],
-      "value": ["value", "roi", "return on investment"],
-      "investment": ["investment", "cost", "pricing"],
-      "support": ["support", "help", "customer support", "technical support"],
-      "training": ["training", "how to use", "tutorials"],
-      "user guides": ["user guides", "documentation", "manuals"],
-      "tutorials": ["tutorials", "how to", "guides"],
-      "community": ["community", "user community", "forums"],
-      "platform updates": ["platform updates", "new features", "updates"],
-      "feedback": ["feedback", "suggestions", "improvements"],
-      "help": ["help", "support", "assistance"],
-      "contact": ["contact", "how to contact", "reach us"],
-      "response time": ["response time", "how fast do you respond", "support time"]
+    // Normalize query
+    const normalizedQuery = query.toLowerCase().replace(/[^a-z0-9 ]/g, ' ');
+    // Map of keywords to knowledgeBase keys (for broad matching)
+    const keywordMap: { [keyword: string]: string } = {
+      // Company
+      "sparkstorm": "what is sparkstorm ai",
+      "noopur": "who is noopur gupta",
+      "ceo": "who is noopur gupta",
+      "history": "company history",
+      "mission": "mission",
+      "vision": "vision",
+      "values": "values",
+      "team": "team",
+      "leadership": "leadership",
+      "advisors": "advisors",
+      "location": "location",
+      "headquarters": "location",
+      "size": "size",
+      "awards": "awards",
+      "culture": "culture",
+      "diversity": "diversity",
+      "careers": "careers",
+      // Products/Services
+      "product": "products",
+      "service": "services",
+      "solution": "solutions",
+      "platform": "platform",
+      "analytics": "analytics",
+      "automation": "automation",
+      "integration": "integration",
+      "custom": "customization",
+      "scalability": "scalability",
+      "update": "updates",
+      "mobile": "mobile app",
+      "cloud": "cloud",
+      "on premise": "on-premise",
+      "api": "api",
+      "documentation": "documentation",
+      "compliance": "compliance",
+      "security": "security",
+      "performance": "performance",
+      "reliability": "reliability",
+      "accessibility": "accessibility",
+      "user experience": "user experience",
+      // Pricing/Support
+      "pricing": "pricing",
+      "plan": "plans",
+      "trial": "free trial",
+      "discount": "discounts",
+      "billing": "billing",
+      "refund": "refund",
+      "enterprise": "enterprise",
+      "comparison": "comparison",
+      "value": "value",
+      "investment": "investment",
+      // Support/Training
+      "support": "support",
+      "training": "training",
+      "guide": "user guides",
+      "tutorial": "tutorials",
+      "community": "community",
+      "feedback": "feedback",
+      "help": "help",
+      "contact": "contact",
+      "response time": "response time",
+      // Industry/Use Cases
+      "industry": "industries",
+      "use case": "use cases",
+      "success": "success stories",
+      "case study": "case studies",
+      "testimonial": "testimonials",
+      "partner": "partners",
+      "platform integration": "platform integration",
+      "innovation": "innovation",
+      // Technical
+      "requirement": "requirements",
+      "setup": "setup",
+      "maintenance": "maintenance",
+      "backup": "backup",
+      "infrastructure": "infrastructure",
+      "feature": "feature updates",
+      // Other
+      "ethic": "ai ethics",
+      "privacy": "data privacy",
+      "event": "events",
+      "news": "news",
+      "blog": "blog",
+      "media": "media",
+      "investor": "investors",
+      "roadmap": "roadmap",
+      "beta": "beta program",
+      "open source": "open source",
+      "sustainability": "sustainability",
+      "csr": "csr",
+      "philanthropy": "philanthropy",
+      "internship": "internships",
+      "mentorship": "mentorship",
+      "hackathon": "hackathons",
+      "certification": "certifications",
+      "awareness": "awareness",
+      "partnership": "partnership opportunities",
+      "customer": "customer stories",
+      "faq": "faq",
+      "press": "press",
+      "media kit": "media kit",
+      "brand": "brand",
+      "logo": "logo",
+      "sales": "contact sales",
+      "demo": "demo",
+      "book": "book a call",
+      "newsletter": "newsletter",
+      "social": "social media",
+      "privacy policy": "privacy policy",
+      "terms": "terms of service",
+      "accessibility statement": "accessibility statement",
+      "legal": "legal"
     };
-
-    // Check for variations of questions
-    for (const [key, variations] of Object.entries(questionVariations)) {
-      if (variations.some(variation => normalizedQuery.includes(variation))) {
+    // Try to match keywords
+    for (const [keyword, key] of Object.entries(keywordMap)) {
+      if (normalizedQuery.includes(keyword)) {
         return knowledgeBase[key];
       }
     }
-
-    // If no match found, return the default response
+    // Try to match exact keys
+    if (knowledgeBase[normalizedQuery]) {
+      return knowledgeBase[normalizedQuery];
+    }
+    // Fallback
     return knowledgeBase.default;
   };
 
