@@ -7,7 +7,7 @@ const knowledgeBase = {
   // Company Information
   "what is sparkstorm ai": "Sparkstorm AI is an innovative AI-powered platform that helps businesses streamline their operations and enhance productivity through cutting-edge technology solutions. We specialize in providing intelligent automation, data analytics, and AI-driven insights to help businesses make better decisions and improve efficiency.",
   
-  "who is noopur gupta": "Noopur Gupta is the CEO and founder of Sparkstorm AI. She is a visionary leader with extensive experience in technology and business leadership. Under her guidance, Sparkstorm AI has grown into a leading provider of AI solutions, helping businesses transform their operations through innovative technology.",
+  "who is noopur gupta": "Noopur Gupta is the CEO of Sparkstorm AI, bringing extensive experience in technology and business leadership. Under her guidance, Sparkstorm AI has grown into a leading provider of AI solutions, helping businesses transform their operations through innovative technology.",
   
   "how do i use sparkstorm ai": "To use Sparkstorm AI, you can:\n1. Visit our website and sign up for a free trial\n2. Schedule a demo with our team\n3. Contact our sales team for a personalized consultation\n4. Book a call with our CEO, Noopur Gupta, to discuss your specific needs\n\nOur platform is designed to be user-friendly and intuitive, with comprehensive documentation and support available to help you get started.",
   
