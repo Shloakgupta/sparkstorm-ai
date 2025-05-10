@@ -5,22 +5,22 @@ import './styles.css';
 // Knowledge base of predefined responses
 const knowledgeBase = {
   // Company Information
-  "what is sparkstorm": "Sparkstorm is an innovative AI-powered platform that helps businesses streamline their operations and enhance productivity through cutting-edge technology solutions.",
-  "who is the ceo": "The CEO of Sparkstorm is [CEO Name], who brings extensive experience in technology and business leadership.",
-  "company history": "Sparkstorm was founded in [Year] with a vision to revolutionize how businesses interact with AI technology.",
+  "what is sparkstorm": "Sparkstorm AI is an innovative AI-powered platform that helps businesses streamline their operations and enhance productivity through cutting-edge technology solutions.",
+  "who is the ceo": "The CEO of Sparkstorm AI is Noopur Gupta, who brings extensive experience in technology and business leadership.",
+  "company history": "Sparkstorm AI was founded with a vision to revolutionize how businesses interact with AI technology.",
   "mission": "Our mission is to empower businesses with intelligent AI solutions that drive growth, efficiency, and innovation.",
   "vision": "We envision a future where every business can leverage the power of AI to achieve their full potential.",
   "values": "Our core values include innovation, integrity, customer success, and continuous learning.",
   "team": "Our team consists of experienced professionals from diverse backgrounds in AI, software development, and business.",
-  "location": "Sparkstorm is headquartered in [City, Country], with a global presence serving clients worldwide.",
-  "size": "We are a growing company with [X] employees dedicated to delivering exceptional AI solutions.",
-  "awards": "Sparkstorm has been recognized with multiple industry awards for innovation and excellence in AI technology.",
+  "location": "Sparkstorm AI is headquartered in the United States, with a global presence serving clients worldwide.",
+  "size": "We are a growing company dedicated to delivering exceptional AI solutions.",
+  "awards": "Sparkstorm AI has been recognized with multiple industry awards for innovation and excellence in AI technology.",
   
   // Products and Services
   "products": "Our product suite includes AI-powered analytics, workflow automation, predictive modeling, and custom AI solutions.",
   "services": "We offer consulting, implementation, training, and ongoing support services for all our AI solutions.",
   "solutions": "Our solutions address key business challenges in areas like customer service, operations, and decision-making.",
-  "platform": "The Sparkstorm platform provides a unified interface for managing all AI-powered tools and analytics.",
+  "platform": "The Sparkstorm AI platform provides a unified interface for managing all AI-powered tools and analytics.",
   "analytics": "Our analytics tools help businesses gain valuable insights from their data through advanced AI algorithms.",
   "automation": "We offer intelligent automation solutions that streamline business processes and reduce manual work.",
   "integration": "Our solutions seamlessly integrate with existing business systems and workflows.",
@@ -29,10 +29,10 @@ const knowledgeBase = {
   "updates": "We regularly release updates and new features to enhance our platform's capabilities.",
   
   // Features and Capabilities
-  "features": "Sparkstorm offers a comprehensive suite of features including AI-powered analytics, automated workflow management, real-time collaboration tools, and customizable dashboards.",
+  "features": "Sparkstorm AI offers a comprehensive suite of features including AI-powered analytics, automated workflow management, real-time collaboration tools, and customizable dashboards.",
   "capabilities": "Our platform can handle natural language processing, predictive analytics, pattern recognition, and automated decision-making.",
   "technology": "We leverage cutting-edge technologies including machine learning, deep learning, and neural networks.",
-  "security": "Sparkstorm implements enterprise-grade security measures including end-to-end encryption, regular security audits, and compliance with major security standards.",
+  "security": "Sparkstorm AI implements enterprise-grade security measures including end-to-end encryption, regular security audits, and compliance with major security standards.",
   "performance": "Our platform is optimized for high performance, handling large-scale data processing and real-time analytics.",
   "reliability": "We maintain 99.9% uptime and implement robust backup and recovery systems.",
   "accessibility": "Our platform is accessible through web browsers and mobile devices, with responsive design for all screen sizes.",
@@ -41,7 +41,7 @@ const knowledgeBase = {
   "compliance": "Our solutions comply with major industry standards and regulations including GDPR, HIPAA, and SOC 2.",
   
   // Pricing and Plans
-  "pricing": "Sparkstorm offers flexible pricing plans tailored to businesses of all sizes. Please contact our sales team for detailed pricing information.",
+  "pricing": "Sparkstorm AI offers flexible pricing plans tailored to businesses of all sizes. Please contact our sales team for detailed pricing information.",
   "plans": "We offer various subscription plans including Basic, Professional, and Enterprise tiers.",
   "free trial": "We offer a 14-day free trial of our platform with full access to all features.",
   "discounts": "We provide special pricing for startups, educational institutions, and non-profit organizations.",
@@ -61,7 +61,7 @@ const knowledgeBase = {
   "platform updates": "We regularly provide updates and new features based on user feedback.",
   "feedback": "We welcome user feedback and continuously improve our platform based on suggestions.",
   "help": "Our help center provides answers to common questions and troubleshooting guides.",
-  "contact": "You can reach us at support@sparkstorm.ai or call us at [Phone Number]. Our office is located at [Address].",
+  "contact": "You can reach us at support@sparkstorm.ai or schedule a call with our CEO, Noopur Gupta, at https://calendly.com/noopurgupta01/1x1",
   "response time": "Our support team typically responds within 2 hours during business hours.",
   
   // Industry and Use Cases
@@ -89,7 +89,7 @@ const knowledgeBase = {
   "feature updates": "We regularly release updates with new features and improvements.",
   
   // Default response for unknown queries
-  "default": "I'm not sure about that specific question. Could you please rephrase or ask something else about Sparkstorm? I'm here to help with information about our company, features, support, and more."
+  "default": "I don't have a specific answer for that question. Would you like to schedule a call with our CEO, Noopur Gupta? You can book a meeting at https://calendly.com/noopurgupta01/1x1 or visit our contact page for more ways to reach us."
 };
 
 interface Message {
@@ -161,7 +161,7 @@ const AIChatWidget: React.FC = () => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
-          <img src="/lovable-uploads/29312d6b-5f6a-4a11-b1cc-4ab04284a888.png" alt="Sparkstorm" className="chat-widget-logo" />
+          <img src="/lovable-uploads/29312d6b-5f6a-4a11-b1cc-4ab04284a888.png" alt="Sparkstorm AI" className="chat-widget-logo" />
           <span>Chat with us</span>
         </motion.button>
       )}
@@ -176,8 +176,8 @@ const AIChatWidget: React.FC = () => {
           >
             <div className="chat-header">
               <div className="header-left">
-                <img src="/lovable-uploads/29312d6b-5f6a-4a11-b1cc-4ab04284a888.png" alt="Sparkstorm" className="chat-header-logo" />
-                <h3>Sparkstorm Assistant</h3>
+                <img src="/lovable-uploads/29312d6b-5f6a-4a11-b1cc-4ab04284a888.png" alt="Sparkstorm AI" className="chat-header-logo" />
+                <h3>Sparkstorm AI Assistant</h3>
               </div>
               <button className="close-button" onClick={() => setIsOpen(false)}>×</button>
             </div>
@@ -204,7 +204,7 @@ const AIChatWidget: React.FC = () => {
                 type="text"
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
-                placeholder="Ask me anything about Sparkstorm..."
+                placeholder="Ask me anything about Sparkstorm AI..."
                 className="chat-input"
               />
               <button type="submit" className="send-button">
