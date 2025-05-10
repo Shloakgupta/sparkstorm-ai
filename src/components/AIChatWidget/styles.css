@@ -51,19 +51,28 @@
   color: white;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 12px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-grow: 1;
 }
 
 .chat-header-logo {
   width: 32px;
   height: 32px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .chat-header h3 {
   margin: 0;
   font-size: 1.1rem;
-  flex-grow: 1;
+  font-weight: 600;
 }
 
 .close-button {
@@ -74,6 +83,7 @@
   cursor: pointer;
   padding: 0;
   line-height: 1;
+  margin-left: auto;
 }
 
 .messages-container {
