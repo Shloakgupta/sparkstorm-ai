@@ -21,11 +21,21 @@ const knowledgeBase = {
   
   "team": "Our team consists of experienced professionals from diverse backgrounds in AI, software development, and business. We're united by our passion for innovation and commitment to delivering exceptional solutions.",
   
+  "leadership": "Sparkstorm AI is led by CEO Noopur Gupta and a team of industry veterans with deep expertise in AI, technology, and business strategy.",
+  
+  "advisors": "Our advisory board includes leaders from top technology companies and academic institutions, guiding our innovation and growth.",
+  
   "location": "Sparkstorm AI is headquartered in the United States, with a global presence serving clients worldwide. Our team works remotely to provide 24/7 support to our international client base.",
   
   "size": "We are a growing company dedicated to delivering exceptional AI solutions. Our team is expanding rapidly to meet the increasing demand for our services.",
   
   "awards": "Sparkstorm AI has been recognized with multiple industry awards for innovation and excellence in AI technology. These accolades reflect our commitment to delivering cutting-edge solutions.",
+  
+  "culture": "We foster a culture of innovation, collaboration, and continuous learning. Our team is passionate about making a positive impact through technology.",
+  
+  "diversity": "We value diversity and inclusion, believing that a wide range of perspectives drives better solutions and outcomes.",
+  
+  "careers": "Interested in joining Sparkstorm AI? Visit our Careers page to see open positions and learn more about our team culture.",
   
   // Products and Services
   "products": "Our product suite includes:\n- AI-powered analytics\n- Workflow automation\n- Predictive modeling\n- Custom AI solutions\n- Real-time data processing\n- Business intelligence tools",
@@ -48,12 +58,17 @@ const knowledgeBase = {
   
   "updates": "We regularly release updates and new features to enhance our platform's capabilities. Our development team is constantly working to improve our solutions.",
   
-  // Features and Capabilities
-  "features": "Sparkstorm AI offers a comprehensive suite of features including:\n- AI-powered analytics\n- Automated workflow management\n- Real-time collaboration tools\n- Customizable dashboards\n- Advanced reporting\n- Mobile accessibility",
+  "mobile app": "Sparkstorm AI offers a mobile app for on-the-go access to analytics and automation tools.",
   
-  "capabilities": "Our platform can handle:\n- Natural language processing\n- Predictive analytics\n- Pattern recognition\n- Automated decision-making\n- Real-time data processing\n- Machine learning models",
+  "cloud": "Our platform is cloud-based, ensuring high availability, security, and scalability.",
   
-  "technology": "We leverage cutting-edge technologies including:\n- Machine learning\n- Deep learning\n- Neural networks\n- Natural language processing\n- Computer vision\n- Predictive analytics",
+  "on-premise": "We offer on-premise deployment options for clients with specific security or compliance needs.",
+  
+  "api": "We provide comprehensive APIs for integrating our solutions with other systems. Our API documentation is available at docs.sparkstorm.ai.",
+  
+  "documentation": "Our API documentation is available at docs.sparkstorm.ai. It includes comprehensive guides and examples for integration.",
+  
+  "compliance": "Our solutions comply with major industry standards and regulations including GDPR, HIPAA, and SOC 2. We maintain the highest standards of data protection and privacy.",
   
   "security": "Sparkstorm AI implements enterprise-grade security measures including:\n- End-to-end encryption\n- Regular security audits\n- Compliance with major security standards\n- Data protection\n- Access controls",
   
@@ -63,34 +78,8 @@ const knowledgeBase = {
   
   "accessibility": "Our platform is accessible through web browsers and mobile devices, with responsive design for all screen sizes. We ensure a consistent experience across all devices.",
   
-  "api": "We provide comprehensive APIs for integrating our solutions with other systems. Our API documentation is available at docs.sparkstorm.ai.",
+  "user experience": "We prioritize user experience with an intuitive interface, helpful guides, and responsive support.",
   
-  "documentation": "Our API documentation is available at docs.sparkstorm.ai. It includes comprehensive guides and examples for integration.",
-  
-  "compliance": "Our solutions comply with major industry standards and regulations including GDPR, HIPAA, and SOC 2. We maintain the highest standards of data protection and privacy.",
-  
-  // Pricing and Plans
-  "pricing": "Sparkstorm AI offers flexible pricing plans tailored to businesses of all sizes. Please contact our sales team for detailed pricing information or schedule a call with our CEO, Noopur Gupta, at https://calendly.com/noopurgupta01/1x1",
-  
-  "plans": "We offer various subscription plans including:\n- Basic: For small businesses\n- Professional: For growing companies\n- Enterprise: For large organizations\n\nEach plan includes different features and support levels.",
-  
-  "free trial": "We offer a 14-day free trial of our platform with full access to all features. This allows you to experience the power of our solutions before making a commitment.",
-  
-  "discounts": "We provide special pricing for:\n- Startups\n- Educational institutions\n- Non-profit organizations\n\nContact our sales team for more information.",
-  
-  "billing": "We offer flexible billing options including monthly and annual subscriptions. Annual plans come with additional discounts and benefits.",
-  
-  "refund": "Our refund policy allows for a full refund within 30 days of purchase if not satisfied. We're committed to ensuring your complete satisfaction.",
-  
-  "enterprise": "Enterprise customers receive:\n- Dedicated support\n- Custom features\n- Priority service\n- Advanced security\n- Custom integration options",
-  
-  "comparison": "Our pricing is competitive in the market, offering more features and better support than similar solutions. We focus on providing maximum value for your investment.",
-  
-  "value": "Our solutions provide significant ROI through:\n- Increased efficiency\n- Better decision-making\n- Cost reduction\n- Improved productivity\n- Enhanced customer service",
-  
-  "investment": "We offer various investment options for businesses looking to implement our solutions. Contact our sales team to discuss the best option for your needs.",
-  
-  // Support and Training
   "support": "Our support team is available 24/7. You can reach them through our help center or by emailing support@sparkstorm.ai. For urgent matters, you can schedule a call with our CEO, Noopur Gupta, at https://calendly.com/noopurgupta01/1x1",
   
   "training": "We provide comprehensive training programs for users at all levels, including:\n- Basic user training\n- Advanced features\n- Technical implementation\n- Best practices\n- Custom training sessions",
@@ -135,8 +124,44 @@ const knowledgeBase = {
   "custom solutions": "Our platform can be customized to meet specific business requirements.",
   "feature updates": "We regularly release updates with new features and improvements.",
   
+  // More topics for 100+ responses
+  "ai ethics": "We are committed to ethical AI development, ensuring fairness, transparency, and accountability in all our solutions.",
+  "data privacy": "Data privacy is a top priority at Sparkstorm AI. We implement strict policies and technologies to protect your information.",
+  "partnerships": "We partner with industry leaders to deliver the best AI solutions to our clients.",
+  "events": "We participate in and host industry events, webinars, and conferences to share knowledge and connect with the community.",
+  "news": "Stay updated with the latest news about Sparkstorm AI on our blog and social media channels.",
+  "blog": "Our blog features articles on AI trends, best practices, and company updates.",
+  "media": "Sparkstorm AI has been featured in leading technology publications and media outlets.",
+  "investors": "We are backed by leading investors who believe in our vision and mission.",
+  "roadmap": "Our product roadmap includes exciting new features and enhancements. Stay tuned for updates!",
+  "beta program": "Join our beta program to get early access to new features and provide feedback.",
+  "open source": "We contribute to open source projects and believe in the power of community-driven innovation.",
+  "sustainability": "We are committed to sustainable business practices and reducing our environmental impact.",
+  "csr": "Our corporate social responsibility initiatives focus on education, diversity, and community support.",
+  "philanthropy": "We support philanthropic efforts and encourage our team to give back to the community.",
+  "internships": "We offer internship opportunities for students and recent graduates interested in AI and technology.",
+  "mentorship": "Our mentorship programs help nurture the next generation of AI leaders.",
+  "hackathons": "We organize and participate in hackathons to foster innovation and creativity.",
+  "certifications": "Sparkstorm AI offers certification programs for users and partners.",
+  "awareness": "We promote AI awareness and education through workshops and seminars.",
+  "partnership opportunities": "Interested in partnering with Sparkstorm AI? Contact us to explore collaboration opportunities.",
+  "customer stories": "Read customer stories to learn how Sparkstorm AI has made a difference for businesses like yours.",
+  "faq": "Visit our FAQ page for answers to common questions about Sparkstorm AI.",
+  "press": "For press inquiries, please contact our media relations team.",
+  "media kit": "Download our media kit for logos, brand guidelines, and company information.",
+  "brand": "Our brand represents innovation, trust, and excellence in AI.",
+  "logo": "You can download the official Sparkstorm AI logo from our media kit.",
+  "contact sales": "Contact our sales team for personalized assistance and pricing information.",
+  "demo": "Schedule a demo to see Sparkstorm AI in action.",
+  "book a call": "Book a call with our CEO, Noopur Gupta, at https://calendly.com/noopurgupta01/1x1.",
+  "newsletter": "Subscribe to our newsletter for the latest updates and insights.",
+  "social media": "Follow us on LinkedIn, Twitter, and Facebook for news and updates.",
+  "privacy policy": "Read our privacy policy to learn how we protect your data.",
+  "terms of service": "Review our terms of service for details on using Sparkstorm AI.",
+  "accessibility statement": "We are committed to making our platform accessible to everyone.",
+  "legal": "For legal inquiries, please contact our legal team.",
   // Default response for unknown queries
-  "default": "I don't have a specific answer for that question. Would you like to schedule a call with our CEO, Noopur Gupta? You can book a meeting at https://calendly.com/noopurgupta01/1x1 or visit our contact page for more ways to reach us."
+  "default": "I don't have a specific answer for that question. Please visit our contact page or reach out to support@sparkstorm.ai if you have any questions. We're here to help!"
 };
 
 interface Message {
