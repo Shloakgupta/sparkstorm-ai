@@ -97,27 +97,27 @@ const Team = () => {
   
   const teamMembers = [
     {
-      name: "Noopur Gupta",
-      role: "Founder & CEO",
-      image: "/lovable-uploads/ae1d15ed-0b22-438d-aede-6554e09de8ed.png",
+      name: "Team Member 1",
+      role: "Role 1",
+      image: "/images/team/member1.png",
       delay: 100,
     },
     {
-      name: "Muzammil",
-      role: "COO",
-      image: "/lovable-uploads/ba1a4abc-2473-4bae-8324-a56dfd73dcf2.png",
+      name: "Team Member 2",
+      role: "Role 2",
+      image: "/images/team/member2.png",
       delay: 200,
     },
     {
-      name: "Rachel Pulice",
-      role: "UX Designer",
-      image: "/lovable-uploads/8734bd9a-c4d3-48e9-866b-11fcff83b6e3.png",
+      name: "Team Member 3",
+      role: "Role 3",
+      image: "/images/team/member3.png",
       delay: 300,
     },
     {
-      name: "Shloak Gupta",
-      role: "Founding Member",
-      image: "/lovable-uploads/bec168c3-7297-4955-8076-b07a99337d80.png",
+      name: "Team Member 4",
+      role: "Role 4",
+      image: "/images/team/member4.png",
       delay: 400,
     },
   ];

@@ -268,7 +268,7 @@ const AIChatWidget: React.FC = () => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
-          <img src="/lovable-uploads/29312d6b-5f6a-4a11-b1cc-4ab04284a888.png" alt="Sparkstorm AI" className="chat-widget-logo" />
+          <img src="/images/sparkstorm-logo.png" alt="Sparkstorm AI" className="chat-widget-logo" />
           <span>Chat with us</span>
         </motion.button>
       )}
@@ -283,7 +283,7 @@ const AIChatWidget: React.FC = () => {
           >
             <div className="chat-header">
               <div className="header-left">
-                <img src="/lovable-uploads/29312d6b-5f6a-4a11-b1cc-4ab04284a888.png" alt="Sparkstorm AI" className="chat-header-logo" />
+                <img src="/images/sparkstorm-logo.png" alt="Sparkstorm AI" className="chat-header-logo" />
                 <h3>Sparkstorm AI Assistant</h3>
               </div>
               <button className="close-button" onClick={() => setIsOpen(false)}>×</button>

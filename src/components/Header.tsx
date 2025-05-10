@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -19,9 +18,9 @@ const Header = () => {
             {/* Logo */}
             <a href="#home" className="flex items-center gap-3">
               <img
-                src="/lovable-uploads/29312d6b-5f6a-4a11-b1cc-4ab04284a888.png"
-                alt="SparkStorm AI Logo"
-                className="h-10 w-auto"
+                src="/images/sparkstorm-logo.png"
+                alt="Sparkstorm AI"
+                className="logo"
               />
               <span className="font-sans text-base font-medium text-gray-800 hover:text-primary transition-colors">
                 Home

@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { Input } from "@/components/ui/input";
@@ -21,8 +20,8 @@ const Partners = () => {
   
   const [isVisible, setIsVisible] = useState(false);
   const [teamMembers, setTeamMembers] = useState<TeamMember[]>([
-    { id: 1, name: "Siva", image: "/lovable-uploads/8ef771d4-addc-488c-a4a2-394948b74e04.png", allowUpload: false },
-    { id: 2, name: "Girija", image: "/lovable-uploads/65ee5a53-727d-49ed-8146-843c3eb992cc.png", allowUpload: false },
+    { id: 1, name: "Siva", image: "/images/partners/siva.png", allowUpload: false },
+    { id: 2, name: "Girija", image: "/images/partners/girija.png", allowUpload: false },
   ]);
   
   useEffect(() => {
